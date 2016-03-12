@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F1509" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gh4-9A-vbe">
+                                <rect key="frame" x="60" y="70" width="200" height="200"/>
+                                <color key="backgroundColor" red="0.16862745579999999" green="0.92941182850000004" blue="0.91372555489999996" alpha="1" colorSpace="deviceRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="72V-Dp-HTs"/>
+                                    <constraint firstAttribute="height" constant="200" id="8ic-3d-TEi"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TZr-Uh-Dla">
+                                <rect key="frame" x="60" y="360" width="200" height="30"/>
+                                <color key="backgroundColor" red="0.92941182850000004" green="0.69411766529999996" blue="0.88235300780000003" alpha="1" colorSpace="deviceRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="bPo-PC-Jpx"/>
+                                    <constraint firstAttribute="width" constant="200" id="giH-pa-HLD"/>
+                                </constraints>
+                                <state key="normal" title="生成二维码"/>
+                                <connections>
+                                    <action selector="productCodeBtnDidClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fxC-TO-i3Q"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GcA-k7-e82">
+                                <rect key="frame" x="60" y="300" width="200" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="Lg3-FP-3Lc"/>
+                                    <constraint firstAttribute="height" constant="30" id="T2w-wK-bBG"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="TZr-Uh-Dla" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="M5n-aJ-eSB"/>
+                            <constraint firstItem="gh4-9A-vbe" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="WYf-WB-PWx"/>
+                            <constraint firstItem="TZr-Uh-Dla" firstAttribute="top" secondItem="GcA-k7-e82" secondAttribute="bottom" constant="30" id="bjL-B2-KZk"/>
+                            <constraint firstItem="gh4-9A-vbe" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="50" id="evn-2Q-zbl"/>
+                            <constraint firstItem="GcA-k7-e82" firstAttribute="top" secondItem="gh4-9A-vbe" secondAttribute="bottom" constant="30" id="xZQ-aE-hFA"/>
+                            <constraint firstItem="GcA-k7-e82" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xaX-co-Mdl"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="textField" destination="GcA-k7-e82" id="HtZ-nZ-Zaq"/>
+                        <outlet property="twoImageView" destination="gh4-9A-vbe" id="Nw5-BJ-cd9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="162.66666666666666" y="333.69999999999999"/>
+        </scene>
+    </scenes>
+</document>
